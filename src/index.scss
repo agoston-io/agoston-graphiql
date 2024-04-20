@@ -1,0 +1,302 @@
+@import "./fonts.scss";
+
+// Containers
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 2000px
+);
+
+// gutter
+$grid-gutter-width: 0;
+
+// theme
+$primary: #ff00ff !default;
+$secondary: #d400ff !default;
+$success: #00ff88 !default;
+$info: #0dcaf0 !default;
+$warning: #ffc107 !default;
+$dark: #000000 !default;
+$error: #dc3545 !default;
+$light: #fff !default;
+$body-bg: #121212 !default;
+$body-color: #fff !default;
+
+// links
+$link-color: $secondary !default;
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
+$link-hover-color: $primary !default;
+
+// nav links
+
+$nav-link-color: $light;
+$nav-link-hover-color: $primary;
+
+
+// Fonts
+$font-size-base: 1rem !default;
+$small-font-size: 1rem !default;
+$font-family-base: "Avenir Book" !default;
+
+// Headings
+$headings-color: $primary !default;
+$headings-font-family: "Avenir Book" !default;
+$headings-font-weight: 600 !default;
+$headings-line-height: 1.2 !default;
+$h1-font-size: $font-size-base * 3 !default;
+$h2-font-size: $font-size-base * 2.6 !default;
+$h3-font-size: $font-size-base * 2.2 !default;
+$h4-font-size: $font-size-base * 1.8 !default;
+$h5-font-size: $font-size-base * 1.4 !default;
+$h6-font-size: $font-size-base * 1.2 !default;
+
+// Buttons
+$input-btn-font-family: "Avenir Book" !default;
+$btn-link-disabled-color: #7e7e7e !default;
+
+// Forms
+$input-font-weight: 200 !default;
+$input-color: #fff;
+$input-bg: #181818;
+$input-border-color: $secondary;
+$input-disabled-color: #fff;
+$input-disabled-bg: $dark;
+$input-disabled-border-color: $secondary;
+
+// Selects
+$form-select-indicator-color: #fff;
+$form-select-disabled-color: rgb(128, 126, 126);
+$form-select-disabled-bg: $dark;
+
+// Navbar
+$navbar-light-brand-color: $primary !default;
+$navbar-light-brand-hover-color: $secondary !default;
+$navbar-light-color: $light !default;
+$navbar-light-hover-color: $secondary !default;
+
+// Navtab
+$nav-tabs-border-color: $primary !default;
+$nav-tabs-link-hover-border-color: $primary !default;
+$nav-tabs-link-active-color: $light !default;
+$nav-tabs-link-active-bg: $primary !default;
+$nav-tabs-link-active-border-color: $primary !default;
+$nav-underline-gap: 0.1rem;
+$nav-underline-border-width: .2rem;
+$nav-underline-link-active-color: $primary !default;
+
+@import "bootstrap/scss/bootstrap.scss";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+// highlight
+code.hljs {
+    font-size: 0.9em;
+}
+
+.hljs-string {
+    color: $primary;
+}
+
+.hljs-keyword {
+    color: #eda6fc;
+}
+
+.hljs-meta {
+    color: #fff;
+}
+
+.hljs-built_in,
+.hljs-type {
+    color: rgb(146, 116, 255);
+}
+
+.hljs-title.class_,
+.hljs-variable.language_,
+.hljs-variable {
+    color: rgb(146, 116, 255);
+}
+
+.hljs-title.function_ {
+    color: rgb(177, 156, 253);
+}
+
+.hljs-attr,
+.hljs-params,
+.hljs-subst {
+    color: #d261ff;
+}
+
+// Boostrap
+.btn-primary {
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: unset;
+    color: $primary;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+}
+
+code {
+    color: $primary;
+}
+
+.form-check-input {
+    background-color: $secondary;
+}
+
+.agoston-bg-dark {
+    background-color: $gray-900;
+}
+
+/* SCROLLBAR START */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #6c757d;
+    border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $secondary;
+}
+
+/* SCROLLBAR END */
+
+.blur {
+    color: transparent;
+    text-shadow: 0 0 6px #fff;
+}
+
+/* Arrow collapse */
+.arrow-collapse:after {
+    margin-left: 10px;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    top: 10px;
+    right: 5px;
+    float: right;
+}
+
+.arrow-collapse.collapsed:after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ff00ff" class="bi bi-caret-left-fill" viewBox="0 0 16 16"><path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/></svg>');
+}
+
+.arrow-collapse:not(.collapsed):after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ff00ff" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>');
+}
+
+/* Loading */
+
+.loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.loading div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loading div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.loading div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.loading div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.loading div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+/* Doc */
+.adoc h2,
+.adoc h3,
+.adoc h4,
+.adoc h5,
+.adoc h6 {
+    margin-bottom: 20px;
+}
+
+.adoc h3,
+.adoc h4,
+.adoc h5,
+.adoc h6 {
+    margin-top: 60px;
+}
+
+.adoc img {
+    margin-bottom: 35px;
+}
