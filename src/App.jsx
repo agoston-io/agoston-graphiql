@@ -8,8 +8,8 @@ import "./App.css";
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const backendUuid = urlParams.get("buuid");
-const ClusterUuid = urlParams.get("cuuid");
+const backendUuid = urlParams.get("buuid") || "undefined";
+const ClusterUuid = urlParams.get("cuuid") || "undefined";
 
 const fetcher = createGraphiQLFetcher({
   url: `https://${backendUuid}.${ClusterUuid}.backend.agoston.io/data/graphql`,
