@@ -1,7 +1,26 @@
-html, body {
-  padding: 0; 
+html,
+body,
+#root {
+  padding: 0;
   margin: 0;
+  height: 100%;
 }
-.graphiql-container {
-  top: 45px; left: 0%;
+
+.windows-fill {
+  min-height: 100%;
+  height: 100%;
+}
+
+.header-row {
+  min-height: 50px;
+  height: 5%;
+}
+
+.graphiql-row {
+  min-height: 95%;
+  height: 95%;
+}
+
+.graphiql-logo-link {
+  display: none;
 }

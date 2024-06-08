@@ -20,16 +20,25 @@ const explorer = explorerPlugin();
 
 function App() {
   return (
-    <div className="container-fluid">
-      <div className="row align-items-center p-2 a-header">
+    <div className="container-fluid windows-fill">
+      <div className="row align-items-center p-2 header-row">
         <div className="col-2">
           <a
             className="fs-5 text-primary m-0"
             href="https://agoston.io"
             target="_blank"
           >
-            AGOSTON
+            AGOSTON{" "}
           </a>
+          <span className="fs-6 text-primary">
+            <a
+              className="fs-5 text-primary m-0"
+              href="https://graphql.org"
+              target="_blank"
+            >
+              Graph<span className="text-white">i</span>QL
+            </a>
+          </span>
         </div>
         <div className="col-10">
           <span className="text-primary">Backend GraphQL endpoint: </span>
@@ -39,20 +48,20 @@ function App() {
           </span>
         </div>
       </div>
-      <div className="row">
+      <div className="row graphiql-row">
         <div className="col-12 g-0">
           <GraphiQL
             fetcher={fetcher}
             plugins={[explorer]}
             defaultEditorToolsVisibility={true}
             defaultQuery={`# A simple query to retrieve the user session data:
-query CurrentSession { 
-  session 
+query CurrentSession {
+  session
 }
 
 # Open the explorer (icon on the left) to build your queries.
-# Once you create tables, functions, or views in your Postgres database, 
-# the GraphQL server of your backend detects them and 
+# Once you create tables, functions, or views in your Postgres database,
+# the GraphQL server of your backend detects them and
 # exposes them in the GraphQL endpoint automatically.
             `}
           />

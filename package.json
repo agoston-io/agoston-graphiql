@@ -11,12 +11,12 @@
     "deploy": "./push_online.sh"
   },
   "dependencies": {
-    "@graphiql/plugin-explorer": "^2.0.0",
+    "@graphiql/plugin-explorer": "^3.0.2",
     "bootstrap": "^5.3.3",
-    "graphiql": "^3.2.0",
+    "graphiql": "^3.2.3",
     "graphql-ws": "^5.16.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
