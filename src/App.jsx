@@ -2,6 +2,7 @@ import { createGraphiQLFetcher } from "@graphiql/toolkit";
 import { explorerPlugin } from "@graphiql/plugin-explorer";
 import { GraphiQL } from "graphiql";
 import "graphiql/graphiql.css";
+import { version } from "../package.json";
 // Style
 import "./index.scss";
 import "./App.css";
@@ -36,7 +37,8 @@ function App() {
               href="https://graphql.org"
               target="_blank"
             >
-              Graph<span className="text-white">i</span>QL
+              Graph<span className="text-white">i</span>QL{" "}
+              <span className="text-muted fs-6">v{version}</span>
             </a>
           </span>
         </div>
